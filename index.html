@@ -668,47 +668,60 @@
 
 @media (max-width: 900px) {
 
-    /* Layout stack for mobile */
+    /* Proper mobile stacking and alignment */
     #home {
+        display: flex;
         flex-direction: column-reverse;
+        align-items: center;          /* Ensures content does not overflow */
+        justify-content: center;
+        width: 100%;
+        padding: 100px 20px 40px;     /* Safe padding on left & right */
+        box-sizing: border-box;       /* Prevents overflow */
         text-align: center;
-        padding-top: 120px;     /* Increased gap for header + image */
         gap: 2rem;
     }
 
-    /* Extra space above the image so it doesn't touch the header */
+    .hero-text {
+        width: 100%;
+        max-width: 500px;             /* Prevents text overflow */
+    }
+
+    /* Extra space above image */
     .hero-img {
         margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-img img {
-        width: 260px;
-        height: 260px;
-        margin-top: 15px;      /* Additional breathing space */
+        width: 240px;
+        height: 240px;
+        margin-top: 10px;
+        object-fit: cover;
     }
 
     .orbit {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
 
     .hero-text h1 {
-        font-size: 3rem;
-    }
-
-    .hero-contact-row {
-        justify-content: center;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
 
     nav {
         justify-content: center;
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
     }
 
     .nav-links {
-        gap: 1.5rem;
+        gap: 1.2rem;
         font-size: 0.9rem;
+        flex-wrap: wrap;              /* Prevents nav overflow */
     }
 
     /* Disable custom cursor for mobile */
@@ -875,7 +888,7 @@
             </div>
         </div>
     </section>
-    <section id=" experience">
+    <section id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="experience-container">
             <div class="glass-card experience-card mouse-target">
@@ -951,7 +964,7 @@
 
             <div class="glass-card project-card mouse-target">
                 <div class="project-img-wrapper">
-                    <img src="https://github.com/Madhudhanush/Properties/blob/main/cattle.jpg?raw=true"
+                    <img src="https://github.com/Madhudhanush/Portfolio/blob/main/cattlemonitor.webp?raw=true"
                         alt="Cattle Monitoring">
                 </div>
                 <div class="project-content">
